@@ -15,7 +15,7 @@ PIXEL_SIZE = 15
 
 class PixelArtApp(TKMT.ThemedTKinterFrame):
     def __init__(self):
-        super().__init__("Лабараторная_2 Левицкая.А.И", "azure", "dark")
+        super().__init__("Левицкая.А.И Лабараторная 2", "azure", "dark")
         self.mlp = None
         self.input_size = 32 * 32
         self.hidden_layer_sizes = [128, 64]
@@ -148,7 +148,7 @@ class PixelArtApp(TKMT.ThemedTKinterFrame):
                                         self.learning_rate,
                                         self.loss_function,
                                         MultiLayerPerceptronConfiguration(epochs))
-        training_data = self.load_data(r"C:\Users\Воронов Игорь\PycharmProjects\lab2(AI)\dataset.csv")
+        training_data = self.load_data(r"/Users/yeep/PycharmProjects/lab2(AI)/dataset.csv")
         self.mlp.train(training_data)
         print(f"Начало обучения с {epochs} эпохами и скоростью обучения {learning_rate}.")
 
