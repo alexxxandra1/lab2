@@ -15,6 +15,5 @@ class MatrixCsvLoader:
             for row in reader:
                 data = list(map(float,(row[0].split(",")[:-1])))  # Все, кроме последнего элемента
                 label = row[0][-1]  # Последний элемент (метка)
-                print(data, label)
                 result.append(InputData(data, label))
         return result
